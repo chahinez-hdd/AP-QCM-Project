@@ -1,0 +1,210 @@
+{
+    "Python": [
+        {
+            "question": "Quelle est la différence entre une liste et un tuple en Python ?",
+            "options": {
+                "a": "Les listes sont ordonnées, les tuples ne le sont pas",
+                "b": "Les tuples sont immuables, les listes sont mutables",
+                "c": "Les tuples peuvent contenir plus d'éléments que les listes"
+            },
+            "correct": "b",
+            "explanation": "Les tuples sont immuables (non modifiables) alors que les listes peuvent être modifiées après leur création."
+        },
+        {
+            "question": "Que fait l'opérateur ** en Python ?",
+            "options": {
+                "a": "Multiplication",
+                "b": "Division entière",
+                "c": "Exponentiation"
+            },
+            "correct": "c",
+            "explanation": "L'opérateur ** est utilisé pour l'exponentiation, par exemple 2**3 = 8"
+        },
+        {
+            "question": "Quelle est la fonction pour obtenir la longueur d'une séquence ?",
+            "options": {
+                "a": "length()",
+                "b": "len()",
+                "c": "size()"
+            },
+            "correct": "b",
+            "explanation": "len() est la fonction intégrée Python pour obtenir la longueur d'une séquence"
+        },
+        {
+            "question": "Comment gérer les exceptions en Python ?",
+            "options": {
+                "a": "try/catch",
+                "b": "try/except",
+                "c": "try/finally"
+            },
+            "correct": "b",
+            "explanation": "En Python, on utilise try/except pour la gestion des exceptions"
+        },
+        {
+            "question": "Quelle est la méthode pour ajouter un élément à une liste ?",
+            "options": {
+                "a": "push()",
+                "b": "add()",
+                "c": "append()"
+            },
+            "correct": "c",
+            "explanation": "append() est la méthode standard pour ajouter un élément à la fin d'une liste"
+        }
+    ],
+    "Réseaux": [
+        {
+            "question": "Quel port est généralement utilisé pour HTTPS ?",
+            "options": {
+                "a": "80",
+                "b": "443",
+                "c": "8080"
+            },
+            "correct": "b",
+            "explanation": "Le port 443 est le port standard pour HTTPS"
+        },
+        {
+            "question": "Que signifie DNS ?",
+            "options": {
+                "a": "Domain Name System",
+                "b": "Data Network Service",
+                "c": "Digital Network System"
+            },
+            "correct": "a",
+            "explanation": "DNS signifie Domain Name System, il traduit les noms de domaine en adresses IP"
+        },
+        {
+            "question": "Quelle est la classe d'adresse IP pour 192.168.1.1 ?",
+            "options": {
+                "a": "Classe A",
+                "b": "Classe B",
+                "c": "Classe C"
+            },
+            "correct": "c",
+            "explanation": "192.168.x.x appartient à la classe C des adresses IP privées"
+        },
+        {
+            "question": "Quel protocole est utilisé pour le transfert sécurisé de fichiers ?",
+            "options": {
+                "a": "FTP",
+                "b": "SFTP",
+                "c": "HTTP"
+            },
+            "correct": "b",
+            "explanation": "SFTP (SSH File Transfer Protocol) est utilisé pour le transfert sécurisé de fichiers"
+        },
+        {
+            "question": "Quelle couche du modèle OSI gère le routage ?",
+            "options": {
+                "a": "Couche réseau",
+                "b": "Couche transport",
+                "c": "Couche liaison"
+            },
+            "correct": "a",
+            "explanation": "La couche réseau (couche 3) gère le routage des paquets"
+        }
+    ],
+    "Algorithmes": [
+        {
+            "question": "Quelle est la complexité temporelle moyenne du tri à bulles ?",
+            "options": {
+                "a": "O(n)",
+                "b": "O(n log n)",
+                "c": "O(n²)"
+            },
+            "correct": "c",
+            "explanation": "Le tri à bulles a une complexité de O(n²) dans le cas moyen"
+        },
+        {
+            "question": "Quel algorithme utilise la technique diviser pour régner ?",
+            "options": {
+                "a": "Tri par insertion",
+                "b": "Tri fusion",
+                "c": "Tri à bulles"
+            },
+            "correct": "b",
+            "explanation": "Le tri fusion utilise la technique diviser pour régner en divisant récursivement le tableau"
+        },
+        {
+            "question": "Quelle structure de données fonctionne en LIFO ?",
+            "options": {
+                "a": "File",
+                "b": "Pile",
+                "c": "Liste chaînée"
+            },
+            "correct": "b",
+            "explanation": "Une pile (stack) fonctionne en Last In First Out"
+        },
+        {
+            "question": "Quelle est la complexité de la recherche dans un arbre binaire de recherche équilibré ?",
+            "options": {
+                "a": "O(1)",
+                "b": "O(log n)",
+                "c": "O(n)"
+            },
+            "correct": "b",
+            "explanation": "La recherche dans un ABR équilibré a une complexité logarithmique"
+        },
+        {
+            "question": "Qu'est-ce qu'un algorithme glouton ?",
+            "options": {
+                "a": "Un algorithme qui utilise beaucoup de mémoire",
+                "b": "Un algorithme qui fait le meilleur choix local à chaque étape",
+                "c": "Un algorithme qui explore toutes les solutions possibles"
+            },
+            "correct": "b",
+            "explanation": "Un algorithme glouton fait le choix optimal local à chaque étape"
+        }
+    ],
+    "Cybersécurité": [
+        {
+            "question": "Qu'est-ce qu'une attaque par déni de service (DoS) ?",
+            "options": {
+                "a": "Une tentative de vol de données",
+                "b": "Une surcharge volontaire d'un service",
+                "c": "Une injection SQL"
+            },
+            "correct": "b",
+            "explanation": "Une attaque DoS vise à rendre un service indisponible en le surchargeant"
+        },
+        {
+            "question": "Que signifie XSS ?",
+            "options": {
+                "a": "Cross-Site Scripting",
+                "b": "Extended Security System",
+                "c": "External Server Service"
+            },
+            "correct": "a",
+            "explanation": "XSS signifie Cross-Site Scripting, une vulnérabilité web courante"
+        },
+        {
+            "question": "Quelle est la meilleure pratique pour stocker des mots de passe ?",
+            "options": {
+                "a": "En texte clair",
+                "b": "Avec un chiffrement simple",
+                "c": "Avec un hash et un sel"
+            },
+            "correct": "c",
+            "explanation": "Les mots de passe doivent être hashés avec un sel pour une sécurité optimale"
+        },
+        {
+            "question": "Qu'est-ce qu'un certificat SSL ?",
+            "options": {
+                "a": "Un fichier de configuration serveur",
+                "b": "Une clé de chiffrement numérique",
+                "c": "Un document d'identité numérique"
+            },
+            "correct": "c",
+            "explanation": "Un certificat SSL est un document numérique qui authentifie l'identité d'un site web"
+        },
+        {
+            "question": "Quelle est la différence entre un virus et un ver informatique ?",
+            "options": {
+                "a": "Un ver se propage seul, un virus a besoin d'un hôte",
+                "b": "Un virus se propage seul, un ver a besoin d'un hôte",
+                "c": "Il n'y a pas de différence"
+            },
+            "correct": "a",
+            "explanation": "Un ver peut se propager de manière autonome, un virus a besoin d'un fichier hôte"
+        }
+    ]
+}
