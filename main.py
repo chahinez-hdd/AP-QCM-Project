@@ -25,3 +25,18 @@ class QuizManager:
             print("Error: Invalid JSON format in questions file.")
             self.questions = {}
             self.categories = []
+
+    def select_category(self) -> str:
+        """Permet à l'utilisateur de choisir une catégorie de questions"""
+        print("\nCatégories disponibles:")
+        for i, category in enumerate(self.categories, 1):
+            print(f"{i}. {category}")
+        
+        while True:
+            try:
+                choice = int(input("\nChoisissez une catégorie (numéro) : "))
+                if 1 <= choice <= len(self.categories):
+                    return self.categories[choice - 1]
+                print("Choix invalide.")
+            except ValueError:
+                print("Veuillez entrer un numéro valide.")
