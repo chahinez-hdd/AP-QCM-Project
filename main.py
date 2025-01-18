@@ -40,3 +40,21 @@ class QuizManager:
                 print("Choix invalide.")
             except ValueError:
                 print("Veuillez entrer un numéro valide.")
+
+    def export_results(self, username: str, filename: str):
+        """Exporte les résultats d'un utilisateur dans un fichier CSV"""
+        if username not in self.users_data:
+            print("Utilisateur non trouvé.")
+            return
+
+        with open(filename, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Date', 'Catégorie', 'Score', 'Temps total'])
+            for entry in self.users_data[username]['history']:
+                writer.writerow([
+                    entry['date'],
+                    entry['category'],
+                    f"{entry['score']}/{entry['total']}",
+                    f"{entry.get('time_taken', 'N/A')} secondes"
+                ])
+        print(f"\nRésultats exportés dans le fichier: {filename}")
