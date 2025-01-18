@@ -93,7 +93,18 @@ class QCMApp:
         self.categories = []
         self.initialize_files()
 
-
+    """ici je gère la connexion de l'utilisateur"""
+    username = input("Entrez votre nom d'utilisateur : ").strip()
+    
+    if username in self.users_data:
+        print(f"\nBienvenue de retour, {username}!")
+        self.display_user_history(username)
+    else:
+        print(f"\nNouveau utilisateur créé : {username}")
+        self.users_data[username] = {"history": []}
+        self.save_users_data()
+    
+    self.current_user = username
 
     def display_user_history(self, username: str):
         """j'affiche ici l'historique QCM d'un utilisateur"""
