@@ -34,57 +34,6 @@ class Timer:
         """Vérifie si le temps est écoulé"""
         return self.time_left <= 0
 
-# Running the Quiz
-def run_quiz(self, category: str) -> dict:
-    
-    """Exécute le QCM pour une catégorie donnée"""
-    questions = self.questions[category]
-    score = 0
-    total_questions = len(questions)
-    start_time = time.time()
-
-    print(f"\nQCM de {category} - {total_questions} questions")
-    print("Vous avez 30 secondes par question.")
-
-    for i, q in enumerate(questions, 1):
-        print(f"\nQuestion {i}/{total_questions} :")
-        print(q["question"])
-        for opt, text in q["options"].items():
-            print(f"{opt}) {text}")
-
-        self.timer = Timer(30)
-        self.timer.start()
-
-        response = input("\nVotre réponse (a/b/c) : ").lower()
-        
-        self.timer.stop()
-        if self.timer.is_time_up():
-            print("Temps écoulé! Question comptée comme incorrecte.")
-            continue
-
-        if response == q["correct"]:
-            print("✓ Bonne réponse!")
-            score += 1
-        else:
-            print(f"✗ Mauvaise réponse. La bonne réponse était: {q['correct']}")
-            print(f"Explication: {q['explanation']}")
-
-    end_time = time.time()
-    time_taken = round(end_time - start_time)
-
-    result = {
-        "score": score,
-        "total": total_questions,
-        "time_taken": time_taken,
-        "category": category
-    }
-
-
-
-
-    return result
-
-
 
 class QCMApp:
     def __init__(self):
@@ -120,7 +69,6 @@ class QCMApp:
                 f"Catégorie: {entry['category']}, "
                 f"Score: {entry['score']}/{entry['total']}, "
                 f"Temps: {entry.get('time_taken', 'N/A')} secondes")
-
 
     def save_users_data(self):
         """je sauvgarde ici les données des users"""
@@ -161,6 +109,51 @@ class QCMApp:
             self.questions = json.load(f)
             self.categories = list(self.questions.keys())
 
+    # Running the Quiz
+    def run_quiz(self, category: str) -> dict:
+        
+        """Exécute le QCM pour une catégorie donnée"""
+        questions = self.questions[category]
+        score = 0
+        total_questions = len(questions)
+        start_time = time.time()
+
+        print(f"\nQCM de {category} - {total_questions} questions")
+        print("Vous avez 30 secondes par question.")
+
+        for i, q in enumerate(questions, 1):
+            print(f"\nQuestion {i}/{total_questions} :")
+            print(q["question"])
+            for opt, text in q["options"].items():
+                print(f"{opt}) {text}")
+
+            self.timer = Timer(30)
+            self.timer.start()
+
+            response = input("\nVotre réponse (a/b/c) : ").lower()
+            
+            self.timer.stop()
+            if self.timer.is_time_up():
+                print("Temps écoulé! Question comptée comme incorrecte.")
+                continue
+
+            if response == q["correct"]:
+                print("✓ Bonne réponse!")
+                score += 1
+            else:
+                print(f"✗ Mauvaise réponse. La bonne réponse était: {q['correct']}")
+                print(f"Explication: {q['explanation']}")
+
+        end_time = time.time()
+        time_taken = round(end_time - start_time)
+
+        result = {
+            "score": score,
+            "total": total_questions,
+            "time_taken": time_taken,
+            "category": category
+        }
+        return result
 
     def run(self):
         """Boucle principale de l'application"""
