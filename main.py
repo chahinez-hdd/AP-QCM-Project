@@ -99,15 +99,53 @@ class QCMApp:
         # remplir le fichier de questions au debut
         if not Path("data/questions.json").exists():
             sample_questions = {
-                "Python": [
-                    {
-                        "question": "Quel est le type de données en Python pour représenter du texte ?",
-                        "options": {"a": "int", "b": "str", "c": "list"},
-                        "correct": "b",
-                        "explanation": "str est le type pour les chaînes de caractères en Python"
-                    }
-                ]
-            }
+                            "Python": [
+                                {
+                                    "question": "Quel est le type de données en Python pour représenter du texte ?",
+                                    "options": {
+                                        "a": "int",
+                                        "b": "str",
+                                        "c": "list"
+                                    },
+                                    "correct": "b",
+                                    "explanation": "str est le type pour les chaînes de caractères en Python"
+                                },
+                                {
+                                    "question": "Quelle est la complexité moyenne de recherche dans un tableau trié ?",
+                                    "options": {
+                                        "a": "O(1)",
+                                        "b": "O(log n)",
+                                        "c": "O(n)"
+                                    },
+                                    "correct": "b",
+                                    "explanation": "La recherche binaire dans un tableau trié a une complexité de O(log n)"
+                                }
+                            ],
+                            "Réseaux": [
+                                {
+                                    "question": "Quel protocole est utilisé pour l'envoi d'emails ?",
+                                    "options": {
+                                        "a": "SMTP",
+                                        "b": "HTTP",
+                                        "c": "FTP"
+                                    },
+                                    "correct": "a",
+                                    "explanation": "SMTP (Simple Mail Transfer Protocol) est le protocole standard pour l'envoi d'emails"
+                                }
+                            ],
+                            "Algorithmes": [
+                                {
+                                    "question": "Quelle est la complexité du tri rapide (Quicksort) en moyenne ?",
+                                    "options": {
+                                        "a": "O(n)",
+                                        "b": "O(n log n)",
+                                        "c": "O(n²)"
+                                    },
+                                    "correct": "b",
+                                    "explanation": "Le tri rapide a une complexité moyenne de O(n log n)"
+                                }
+                            ]
+                        }
             with open("data/questions.json", "w", encoding="utf-8") as f:
                 json.dump(sample_questions, f, ensure_ascii=False, indent=4)
 
