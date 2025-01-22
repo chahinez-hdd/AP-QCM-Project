@@ -8,10 +8,6 @@ import sys
 from typing import Dict, List, Optional
 
 
-
-
-
-
 class Timer:
     def __init__(self, duration: int):
         self.duration = duration
