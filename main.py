@@ -1,4 +1,18 @@
 
+import json
+import datetime
+import time
+from pathlib import Path
+import csv
+import threading
+import sys
+from typing import Dict, List, Optional
+
+
+
+
+
+
 class Timer:
     def __init__(self, duration: int):
         self.duration = duration
@@ -109,6 +123,39 @@ class QCMApp:
             self.questions = json.load(f)
             self.categories = list(self.questions.keys())
 
+    def select_category(self) -> str:
+        """Permet à l'utilisateur de choisir une catégorie de questions"""
+        print("\nCatégories disponibles:")
+        for i, category in enumerate(self.categories, 1):
+            print(f"{i}. {category}")
+        
+        while True:
+            try:
+                choice = int(input("\nChoisissez une catégorie (numéro) : "))
+                if 1 <= choice <= len(self.categories):
+                    return self.categories[choice - 1]
+                print("Choix invalide.")
+            except ValueError:
+                print("Veuillez entrer un numéro valide.")
+
+    def export_results(self, username: str, filename: str):
+        """Exporte les résultats d'un utilisateur dans un fichier CSV"""
+        if username not in self.users_data:
+            print("Utilisateur non trouvé.")
+            return
+
+        with open(filename, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Date', 'Catégorie', 'Score', 'Temps total'])
+            for entry in self.users_data[username]['history']:
+                writer.writerow([
+                    entry['date'],
+                    entry['category'],
+                    f"{entry['score']}/{entry['total']}",
+                    f"{entry.get('time_taken', 'N/A')} secondes"
+                ])
+        print(f"\nRésultats exportés dans le fichier: {filename}")
+
     # Running the Quiz
     def run_quiz(self, category: str) -> dict:
         
@@ -155,6 +202,22 @@ class QCMApp:
         }
         return result
 
+    def save_quiz_result(self, result: dict):
+        """Sauvegarde le résultat du QCM"""
+        if not self.current_user:
+            return
+
+        result_entry = {
+            "date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "score": result["score"],
+            "total": result["total"],
+            "time_taken": result["time_taken"],
+            "category": result["category"]
+        }
+
+        self.users_data[self.current_user]["history"].append(result_entry)
+        self.save_users_data()
+
     def run(self):
         """Boucle principale de l'application"""
         print("=== Bienvenue au QCM Informatique ! ===")
@@ -173,3 +236,6 @@ class QCMApp:
                 choice = input("\nVotre choix : ")
 
 
+if __name__ == "__main__":
+    app = QCMApp()
+    app.run()
