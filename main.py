@@ -164,10 +164,10 @@ class QCMApp:
         
         while True:
             try:
-                choice = int(input("\nChoisissez une catégorie (numéro) : "))
+                choice = int(input("\nChoisissez une catégorie (par numéro) : "))
                 if 1 <= choice <= len(self.categories):
                     return self.categories[choice - 1]
-                print("Choix invalide.")
+                print("Choix incorrecte.")
             except ValueError:
                 print("Veuillez entrer un numéro valide.")
 
@@ -214,14 +214,14 @@ class QCMApp:
             
             self.timer.stop()
             if self.timer.is_time_up():
-                print("Temps écoulé! Question comptée comme incorrecte.")
+                print("Temps termine! Question comptée comme incorrecte.")
                 continue
 
             if response == q["correct"]:
                 print("✓ Bonne réponse!")
                 score += 1
             else:
-                print(f"✗ Mauvaise réponse. La bonne réponse était: {q['correct']}")
+                print(f"Mauvaise réponse. La bonne réponse était: {q['correct']}")
                 print(f"Explication: {q['explanation']}")
 
         end_time = time.time()
