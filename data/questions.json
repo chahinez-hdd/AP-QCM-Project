@@ -49,6 +49,26 @@
             },
             "correct": "c",
             "explanation": "append() est la méthode standard pour ajouter un élément à la fin d'une liste"
+        },
+        {
+            "question": "Quelle est la sortie de `print(type([]))` en Python ?",
+            "options": {
+                "a": "<class 'list'>",
+                "b": "<class 'tuple'>",
+                "c": "<class 'array'>"
+            },
+            "correct": "a",
+            "explanation": "La sortie est `<class 'list'>` car `[]` est une liste"
+        },
+        {
+            "question": "Quelle méthode est utilisée pour trier une liste en place ?",
+            "options": {
+                "a": "sorted()",
+                "b": "sort()",
+                "c": "order()"
+            },
+            "correct": "b",
+            "explanation": "La méthode `sort()` trie la liste en place, contrairement à `sorted()` qui retourne une nouvelle liste"
         }
     ],
     "Réseaux": [
@@ -101,6 +121,26 @@
             },
             "correct": "a",
             "explanation": "La couche réseau (couche 3) gère le routage des paquets"
+        },
+        {
+            "question": "Quel protocole est utilisé pour attribuer des adresses IP automatiquement ?",
+            "options": {
+                "a": "DNS",
+                "b": "DHCP",
+                "c": "ARP"
+            },
+            "correct": "b",
+            "explanation": "DHCP (Dynamic Host Configuration Protocol) attribue des adresses IP automatiquement"
+        },
+        {
+            "question": "Quel est le rôle d'un pare-feu (firewall) ?",
+            "options": {
+                "a": "Accélérer les connexions réseau",
+                "b": "Filtrer le trafic réseau",
+                "c": "Stocker des données"
+            },
+            "correct": "b",
+            "explanation": "Un pare-feu filtre le trafic réseau pour protéger contre les menaces"
         }
     ],
     "Algorithmes": [
@@ -153,6 +193,26 @@
             },
             "correct": "b",
             "explanation": "Un algorithme glouton fait le choix optimal local à chaque étape"
+        },
+        {
+            "question": "Quelle est la complexité du tri rapide (QuickSort) dans le pire des cas ?",
+            "options": {
+                "a": "O(n)",
+                "b": "O(n log n)",
+                "c": "O(n²)"
+            },
+            "correct": "c",
+            "explanation": "Le tri rapide a une complexité de O(n²) dans le pire des cas"
+        },
+        {
+            "question": "Quelle structure de données utilise le principe FIFO ?",
+            "options": {
+                "a": "Pile",
+                "b": "File",
+                "c": "Arbre"
+            },
+            "correct": "b",
+            "explanation": "Une file (queue) fonctionne en First In First Out"
         }
     ],
     "Cybersécurité": [
@@ -205,6 +265,386 @@
             },
             "correct": "a",
             "explanation": "Un ver peut se propager de manière autonome, un virus a besoin d'un fichier hôte"
+        },
+        {
+            "question": "Qu'est-ce qu'une attaque de l'homme du milieu (Man-in-the-Middle) ?",
+            "options": {
+                "a": "Une attaque qui intercepte les communications entre deux parties",
+                "b": "Une attaque qui supprime des fichiers",
+                "c": "Une attaque qui crypte les données"
+            },
+            "correct": "a",
+            "explanation": "Une attaque de l'homme du milieu intercepte les communications entre deux parties"
+        },
+        {
+            "question": "Quel est le rôle d'un VPN ?",
+            "options": {
+                "a": "Accélérer la connexion Internet",
+                "b": "Crypter les communications et masquer l'adresse IP",
+                "c": "Stocker des données"
+            },
+            "correct": "b",
+            "explanation": "Un VPN crypte les communications et masque l'adresse IP"
+        }
+    ],
+    "Base de données": [
+        {
+            "question": "Quel langage est utilisé pour interroger une base de données relationnelle ?",
+            "options": {
+                "a": "SQL",
+                "b": "Python",
+                "c": "Java"
+            },
+            "correct": "a",
+            "explanation": "SQL (Structured Query Language) est le langage standard pour interroger les bases de données relationnelles"
+        },
+        {
+            "question": "Qu'est-ce qu'une clé primaire ?",
+            "options": {
+                "a": "Une clé utilisée pour chiffrer les données",
+                "b": "Un identifiant unique pour chaque enregistrement dans une table",
+                "c": "Une clé utilisée pour les jointures"
+            },
+            "correct": "b",
+            "explanation": "Une clé primaire est un identifiant unique pour chaque enregistrement dans une table"
+        },
+        {
+            "question": "Quelle est la différence entre une jointure interne et une jointure externe ?",
+            "options": {
+                "a": "La jointure interne inclut tous les enregistrements, même sans correspondance",
+                "b": "La jointure externe inclut tous les enregistrements, même sans correspondance",
+                "c": "Il n'y a pas de différence"
+            },
+            "correct": "b",
+            "explanation": "Une jointure externe inclut tous les enregistrements, même s'il n'y a pas de correspondance"
+        },
+        {
+            "question": "Qu'est-ce qu'une transaction en base de données ?",
+            "options": {
+                "a": "Une opération unique qui ne peut pas être annulée",
+                "b": "Une série d'opérations traitées comme une seule unité",
+                "c": "Une sauvegarde de la base de données"
+            },
+            "correct": "b",
+            "explanation": "Une transaction est une série d'opérations traitées comme une seule unité"
+        },
+        {
+            "question": "Quel est le rôle d'un index en base de données ?",
+            "options": {
+                "a": "Chiffrer les données",
+                "b": "Accélérer les recherches",
+                "c": "Supprimer les doublons"
+            },
+            "correct": "b",
+            "explanation": "Un index accélère les recherches en créant une structure de données optimisée"
+        },
+        {
+            "question": "Qu'est-ce qu'une base de données NoSQL ?",
+            "options": {
+                "a": "Une base de données qui n'utilise pas SQL",
+                "b": "Une base de données relationnelle",
+                "c": "Une base de données qui ne stocke que des fichiers"
+            },
+            "correct": "a",
+            "explanation": "Une base de données NoSQL n'utilise pas SQL et est souvent utilisée pour les données non structurées"
+        },
+        {
+            "question": "Quel est le rôle d'une clé étrangère ?",
+            "options": {
+                "a": "Lier deux tables ensemble",
+                "b": "Chiffrer les données",
+                "c": "Supprimer les doublons"
+            },
+            "correct": "a",
+            "explanation": "Une clé étrangère lie deux tables ensemble en référençant une clé primaire"
+        }
+    ],
+    "Développement Web": [
+        {
+            "question": "Quel langage est principalement utilisé pour le développement front-end ?",
+            "options": {
+                "a": "Python",
+                "b": "JavaScript",
+                "c": "PHP"
+            },
+            "correct": "b",
+            "explanation": "JavaScript est le langage principal pour le développement front-end"
+        },
+        {
+            "question": "Qu'est-ce que le CSS ?",
+            "options": {
+                "a": "Un langage de programmation",
+                "b": "Un langage de style pour les pages web",
+                "c": "Un framework JavaScript"
+            },
+            "correct": "b",
+            "explanation": "CSS (Cascading Style Sheets) est utilisé pour styliser les pages web"
+        },
+        {
+            "question": "Quel framework est souvent utilisé pour le développement front-end ?",
+            "options": {
+                "a": "Django",
+                "b": "React",
+                "c": "Flask"
+            },
+            "correct": "b",
+            "explanation": "React est un framework JavaScript populaire pour le développement front-end"
+        },
+        {
+            "question": "Quel protocole est utilisé pour les requêtes HTTP ?",
+            "options": {
+                "a": "FTP",
+                "b": "HTTP/HTTPS",
+                "c": "SMTP"
+            },
+            "correct": "b",
+            "explanation": "HTTP/HTTPS est le protocole utilisé pour les requêtes web"
+        },
+        {
+            "question": "Qu'est-ce qu'une API REST ?",
+            "options": {
+                "a": "Une interface de programmation basée sur des requêtes HTTP",
+                "b": "Un langage de programmation",
+                "c": "Un type de base de données"
+            },
+            "correct": "a",
+            "explanation": "Une API REST est une interface de programmation basée sur des requêtes HTTP"
+        },
+        {
+            "question": "Quel est le rôle de HTML dans le développement web ?",
+            "options": {
+                "a": "Styliser les pages web",
+                "b": "Structurer le contenu des pages web",
+                "c": "Gérer les interactions utilisateur"
+            },
+            "correct": "b",
+            "explanation": "HTML est utilisé pour structurer le contenu des pages web"
+        },
+        {
+            "question": "Qu'est-ce qu'un cookie en développement web ?",
+            "options": {
+                "a": "Un fichier stocké sur le serveur",
+                "b": "Un petit fichier stocké sur l'ordinateur de l'utilisateur",
+                "c": "Un type de base de données"
+            },
+            "correct": "b",
+            "explanation": "Un cookie est un petit fichier stocké sur l'ordinateur de l'utilisateur pour garder des informations"
+        }
+    ],
+    "Systèmes d'exploitation": [
+        {
+            "question": "Quel est le noyau de Linux ?",
+            "options": {
+                "a": "Kernel",
+                "b": "Shell",
+                "c": "Terminal"
+            },
+            "correct": "a",
+            "explanation": "Le noyau de Linux s'appelle Kernel"
+        },
+        {
+            "question": "Quel est le rôle du gestionnaire de mémoire dans un système d'exploitation ?",
+            "options": {
+                "a": "Gérer les fichiers",
+                "b": "Allouer et libérer la mémoire",
+                "c": "Gérer les processus"
+            },
+            "correct": "b",
+            "explanation": "Le gestionnaire de mémoire alloue et libère la mémoire pour les processus"
+        },
+        {
+            "question": "Qu'est-ce qu'un processus zombie ?",
+            "options": {
+                "a": "Un processus qui consomme trop de mémoire",
+                "b": "Un processus terminé mais encore présent dans la table des processus",
+                "c": "Un processus qui ne répond plus"
+            },
+            "correct": "b",
+            "explanation": "Un processus zombie est un processus terminé mais encore présent dans la table des processus"
+        },
+        {
+            "question": "Quel est le système de fichiers utilisé par Windows ?",
+            "options": {
+                "a": "EXT4",
+                "b": "NTFS",
+                "c": "FAT32"
+            },
+            "correct": "b",
+            "explanation": "NTFS est le système de fichiers moderne utilisé par Windows"
+        },
+        {
+            "question": "Qu'est-ce qu'un shell en informatique ?",
+            "options": {
+                "a": "Une interface utilisateur pour interagir avec le système d'exploitation",
+                "b": "Un type de virus",
+                "c": "Un composant matériel"
+            },
+            "correct": "a",
+            "explanation": "Un shell est une interface utilisateur pour interagir avec le système d'exploitation"
+        },
+        {
+            "question": "Quel est le rôle d'un système de fichiers ?",
+            "options": {
+                "a": "Gérer les processus",
+                "b": "Organiser et stocker les fichiers",
+                "c": "Gérer la mémoire"
+            },
+            "correct": "b",
+            "explanation": "Un système de fichiers organise et stocke les fichiers sur un disque"
+        },
+        {
+            "question": "Qu'est-ce qu'un thread en programmation ?",
+            "options": {
+                "a": "Un processus indépendant",
+                "b": "Une unité d'exécution au sein d'un processus",
+                "c": "Un type de fichier"
+            },
+            "correct": "b",
+            "explanation": "Un thread est une unité d'exécution au sein d'un processus"
+        }
+    ],
+    "Programmation Orientée Objet (POO)": [
+        {
+            "question": "Qu'est-ce qu'une classe en POO ?",
+            "options": {
+                "a": "Un modèle pour créer des objets",
+                "b": "Une fonction",
+                "c": "Une variable globale"
+            },
+            "correct": "a",
+            "explanation": "Une classe est un modèle pour créer des objets en POO"
+        },
+        {
+            "question": "Qu'est-ce que l'encapsulation en POO ?",
+            "options": {
+                "a": "Cacher les détails d'implémentation",
+                "b": "Hériter des propriétés d'une classe",
+                "c": "Créer plusieurs instances d'une classe"
+            },
+            "correct": "a",
+            "explanation": "L'encapsulation consiste à cacher les détails d'implémentation et à exposer uniquement ce qui est nécessaire"
+        },
+        {
+            "question": "Qu'est-ce que l'héritage en POO ?",
+            "options": {
+                "a": "Créer une nouvelle classe à partir d'une classe existante",
+                "b": "Cacher les détails d'implémentation",
+                "c": "Créer plusieurs instances d'une classe"
+            },
+            "correct": "a",
+            "explanation": "L'héritage permet de créer une nouvelle classe à partir d'une classe existante"
+        },
+        {
+            "question": "Qu'est-ce qu'un objet en POO ?",
+            "options": {
+                "a": "Une instance d'une classe",
+                "b": "Une fonction",
+                "c": "Une variable"
+            },
+            "correct": "a",
+            "explanation": "Un objet est une instance d'une classe en POO"
+        },
+        {
+            "question": "Qu'est-ce que le polymorphisme en POO ?",
+            "options": {
+                "a": "Utiliser une interface unique pour différents types de données",
+                "b": "Cacher les détails d'implémentation",
+                "c": "Créer plusieurs instances d'une classe"
+            },
+            "correct": "a",
+            "explanation": "Le polymorphisme permet d'utiliser une interface unique pour différents types de données"
+        },
+        {
+            "question": "Qu'est-ce qu'une méthode en POO ?",
+            "options": {
+                "a": "Une fonction définie dans une classe",
+                "b": "Une variable",
+                "c": "Un type de données"
+            },
+            "correct": "a",
+            "explanation": "Une méthode est une fonction définie dans une classe"
+        },
+        {
+            "question": "Qu'est-ce qu'un constructeur en POO ?",
+            "options": {
+                "a": "Une méthode spéciale pour initialiser un objet",
+                "b": "Une fonction",
+                "c": "Une variable globale"
+            },
+            "correct": "a",
+            "explanation": "Un constructeur est une méthode spéciale pour initialiser un objet"
+        }
+    ],
+    "Intelligence Artificielle (IA)": [
+        {
+            "question": "Qu'est-ce que l'apprentissage supervisé ?",
+            "options": {
+                "a": "Un modèle qui apprend à partir de données étiquetées",
+                "b": "Un modèle qui apprend sans données étiquetées",
+                "c": "Un modèle qui apprend à partir de règles prédéfinies"
+            },
+            "correct": "a",
+            "explanation": "L'apprentissage supervisé utilise des données étiquetées pour entraîner un modèle"
+        },
+        {
+            "question": "Qu'est-ce qu'un réseau de neurones ?",
+            "options": {
+                "a": "Un modèle inspiré du cerveau humain",
+                "b": "Un type de base de données",
+                "c": "Un algorithme de tri"
+            },
+            "correct": "a",
+            "explanation": "Un réseau de neurones est un modèle inspiré du cerveau humain"
+        },
+        {
+            "question": "Qu'est-ce que le deep learning ?",
+            "options": {
+                "a": "Un sous-domaine de l'IA utilisant des réseaux de neurones profonds",
+                "b": "Un algorithme de recherche",
+                "c": "Un type de base de données"
+            },
+            "correct": "a",
+            "explanation": "Le deep learning utilise des réseaux de neurones profonds pour apprendre à partir de données"
+        },
+        {
+            "question": "Qu'est-ce que la classification en IA ?",
+            "options": {
+                "a": "Prédire une classe à partir de données",
+                "b": "Trier des données",
+                "c": "Créer des clusters de données"
+            },
+            "correct": "a",
+            "explanation": "La classification consiste à prédire une classe à partir de données"
+        },
+        {
+            "question": "Qu'est-ce que la régression en IA ?",
+            "options": {
+                "a": "Prédire une valeur continue",
+                "b": "Classer des données",
+                "c": "Créer des clusters de données"
+            },
+            "correct": "a",
+            "explanation": "La régression consiste à prédire une valeur continue"
+        },
+        {
+            "question": "Qu'est-ce qu'un algorithme génétique ?",
+            "options": {
+                "a": "Un algorithme inspiré de la sélection naturelle",
+                "b": "Un algorithme de tri",
+                "c": "Un type de réseau de neurones"
+            },
+            "correct": "a",
+            "explanation": "Un algorithme génétique est inspiré de la sélection naturelle pour résoudre des problèmes"
+        },
+        {
+            "question": "Qu'est-ce que le clustering en IA ?",
+            "options": {
+                "a": "Regrouper des données similaires",
+                "b": "Prédire une classe",
+                "c": "Prédire une valeur continue"
+            },
+            "correct": "a",
+            "explanation": "Le clustering consiste à regrouper des données similaires"
         }
     ]
 }
